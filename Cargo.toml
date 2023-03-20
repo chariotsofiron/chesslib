@@ -1,0 +1,25 @@
+[package]
+name = "patzer"
+version = "0.1.0"
+edition = "2021"
+build = "src/build.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bitintr = "0.3.0"
+derive_more = "0.99.16"
+enum-map = "1.1.1"
+
+[build-dependencies]
+bitintr = "0.3.0"
+derive_more = "0.99.16"
+enum-map = "1.1.1"
+
+
+[profile.dev.build-override]
+opt-level = 3
+[profile.release.build-override]
+opt-level = 3
+[profile.test.build-override]
+opt-level = 3
